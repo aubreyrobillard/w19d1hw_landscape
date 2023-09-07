@@ -7,9 +7,9 @@ game_data= {
 while(True):
     if(game_data['money'] < 5):
         user_input = int(input("""
-                        would you like to...
-                        [1] Use your teeth to cut the grass and earn $1?
-                        [2] Quit the game?
+                            would you like to...
+                            [1] Use your teeth to cut the grass and earn $1?
+                            [2] Quit the game?
                     """))
         if(user_input == 1):
             game_data["money"] += 1
@@ -131,6 +131,126 @@ while(True):
             print(f"You have $ {game_data['money']} in your pocket")
 
         if(user_input == 4):
+            game_data["quit"] = True
+
+        if(game_data["quit"] == True):
+            print(f"game over")
+            break
+
+    if(game_data['money'] >= 250):
+        user_input = int(input("""
+                            would you like to...
+                            [1] Use the old-timey lawnmower to cut the grass for $50?
+                            [2] Use the rusty scissors to cut the grass for $5?
+                            [3] Use your teeth to cut the grass for $1?
+                            [4] Buy a battery-powered lawnmower for $250?
+                            [5] Quit the game?
+                        """))
+        
+        if(user_input == 1):
+            game_data['money'] += 50
+            print(f"you earned $50")
+            print(f"you have $ {game_data['money']} in your pocket")
+
+        if(user_input == 2):
+            game_data['money'] += 5
+            print(f"you earned $5")
+            print(f"you have $ {game_data['money']} in your pocket")
+
+        if(user_input == 3):
+            game_data["money"] += 1
+            print(f"you earned $1")
+            print(f"You have $ {game_data['money']} in your pocket")
+        
+        if(user_input == 4):
+            game_data['money'] -= 250
+            print(f"you purchased a battery-powered lawnmower")
+            print(f"you have ${game_data['money']} in your pocket")
+            break
+
+        if(user_input == 5):
+            game_data["quit"] = True
+
+        if(game_data["quit"] == True):
+            print(f"game over")
+            break
+
+while(True):
+    if(game_data['money'] <= 500):
+        user_input = int(input("""
+                            would you like to...
+                            [1] Use battery-powered lawnmower to cut the grass for $100?
+                            [2] Use the old-timey lawnmower to cut the grass for $50?
+                            [3] Use the rusty scissors to cut the grass for $5?
+                            [4] Use your teeth to cut the grass for $1?
+                            [5] Quit the game?
+                        """))
+        
+        if(user_input == 1):
+            game_data['money'] += 100
+            print(f"you earned $100")
+            print(f"you have $ {game_data['money']} in your pocket")
+
+        if(user_input == 2):
+            game_data['money'] += 50
+            print(f"you earned $50")
+            print(f"you have $ {game_data['money']} in your pocket")
+
+        if(user_input == 3):
+            game_data['money'] += 5
+            print(f"you earned $5")
+            print(f"you have $ {game_data['money']} in your pocket")
+
+        if(user_input == 4):
+            game_data["money"] += 1
+            print(f"you earned $1")
+            print(f"You have $ {game_data['money']} in your pocket")
+
+        if(user_input == 5):
+            game_data["quit"] = True
+
+        if(game_data["quit"] == True):
+            print(f"game over")
+            break
+
+    if(game_data['money'] >= 500):
+        user_input = int(input("""
+                            would you like to...
+                            [1] Use battery-powered lawnmower to cut the grass for $100?
+                            [2] Use the old-timey lawnmower to cut the grass for $50?
+                            [3] Use the rusty scissors to cut the grass for $5?
+                            [4] Use your teeth to cut the grass for $1?
+                            [5] Hire a team of starving students for $500?
+                            [6] Quit the game?
+                        """))
+
+        if(user_input == 1):
+            game_data['money'] += 100
+            print(f"you earned $100")
+            print(f"you have $ {game_data['money']} in your pocket")
+
+        if(user_input == 2):
+            game_data['money'] += 50
+            print(f"you earned $50")
+            print(f"you have $ {game_data['money']} in your pocket")
+
+        if(user_input == 3):
+            game_data['money'] += 5
+            print(f"you earned $5")
+            print(f"you have $ {game_data['money']} in your pocket")
+
+        if(user_input == 4):
+            game_data["money"] += 1
+            print(f"you earned $1")
+            print(f"You have $ {game_data['money']} in your pocket")
+
+        if(user_input == 5):
+            game_data['money'] -= 500
+            print(f"you hired a team of starving students")
+            print(f"you have ${game_data['money']} in your pocket")
+            break
+
+        if(user_input == 6):
             game_data["quit"] = True
 
         if(game_data["quit"] == True):
